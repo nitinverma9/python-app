@@ -4,17 +4,17 @@ pipeline {
         def BUILDVERSION = sh(script: "echo `date +%s`", returnStdout: true).trim()
     }
     stages {
-        #stage('Clone Repository') {
-        # steps {
-        #       script {
-        #       def credentialsId = 'jenkins-nitin'
-        #       def repoUrl = 'https://github.com/nitinverma9/python-app'
-        #       checkout([$class: 'GitSCM',
-        #            branches: [[name: 'main']],
-        #            userRemoteConfigs: [[credentialsId: credentialsId, url: repoUrl]]])
-        #       }
-        #    }
-        #  }
+        //stage('Clone Repository') {
+        // steps {
+        //       script {
+        //      def credentialsId = 'jenkins-nitin'
+        //      def repoUrl = 'https://github.com/nitinverma9/python-app'
+        //      checkout([$class: 'GitSCM',
+        //           branches: [[name: 'main']],
+        //           userRemoteConfigs: [[credentialsId: credentialsId, url: repoUrl]]])
+        //      }
+        //   }
+        // }
         
         stage('Build') {
              steps {
